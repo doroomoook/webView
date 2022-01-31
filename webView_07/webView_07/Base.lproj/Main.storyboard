@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="webView_07" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8sU-SP-UAd">
+                                <rect key="frame" x="20" y="54" width="260" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8sU-SP-UAd" secondAttribute="height" multiplier="130:17" id="u6D-09-xrR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7j-Xx-3oa">
+                                <rect key="frame" x="341" y="55.5" width="43" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go"/>
+                                <connections>
+                                    <action selector="btnGotoUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XU-aB-HvM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6z-Ww-AvX">
+                                <rect key="frame" x="26" y="113" width="56" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Site1"/>
+                                <connections>
+                                    <action selector="btnGotoSite1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o6Y-sV-NnV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwE-ub-STF">
+                                <rect key="frame" x="108" y="113" width="58" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Site2"/>
+                                <connections>
+                                    <action selector="btnGoSite2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jqc-qy-pIR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuD-M0-GOU">
+                                <rect key="frame" x="204" y="113" width="76" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Html"/>
+                                <connections>
+                                    <action selector="btnLoadHtmlString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNQ-FD-r4z"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tUB-Nr-7Ro">
+                                <rect key="frame" x="0.0" y="144" width="414" height="674"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RDQ-81-Zze">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kxs-2H-SWI"/>
+                                    <barButtonItem systemItem="stop" id="Jb2-sS-zdp">
+                                        <connections>
+                                            <action selector="btnStop:" destination="BYZ-38-t0r" id="6wp-5q-8np"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AWu-Ga-SKW"/>
+                                    <barButtonItem systemItem="refresh" id="2Zl-6T-LUS">
+                                        <connections>
+                                            <action selector="btnReload:" destination="BYZ-38-t0r" id="7RK-ZL-f3K"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NgG-ee-jOi"/>
+                                    <barButtonItem systemItem="rewind" id="Stf-d1-Ne5">
+                                        <connections>
+                                            <action selector="btnGoBack:" destination="BYZ-38-t0r" id="KN2-Xd-R8b"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="EDf-of-lud"/>
+                                    <barButtonItem systemItem="fastForward" id="6ny-QI-8Fu">
+                                        <connections>
+                                            <action selector="btnGoForward:" destination="BYZ-38-t0r" id="LJ5-6w-oMZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="IBS-rr-hWx"/>
+                                </items>
+                            </toolbar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ffy-r6-JqK">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7g-cN-bVw">
+                                <rect key="frame" x="337" y="113" width="47" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="File"/>
+                                <connections>
+                                    <action selector="btnLoadHtmlFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0tM-Wq-gYf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UwE-ub-STF" firstAttribute="leading" secondItem="p6z-Ww-AvX" secondAttribute="trailing" constant="26" id="6bH-jH-Wep"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D7g-cN-bVw" secondAttribute="trailing" constant="30" id="AK2-Nf-zFH"/>
+                            <constraint firstItem="p6z-Ww-AvX" firstAttribute="top" secondItem="8sU-SP-UAd" secondAttribute="bottom" constant="25" id="DXW-4m-mQd"/>
+                            <constraint firstItem="8sU-SP-UAd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GeB-ec-dyt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O7j-Xx-3oa" secondAttribute="trailing" constant="30" id="KuC-Du-8g5"/>
+                            <constraint firstItem="D7g-cN-bVw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="337" id="Qoc-Lb-d3R"/>
+                            <constraint firstItem="D7g-cN-bVw" firstAttribute="top" secondItem="O7j-Xx-3oa" secondAttribute="bottom" constant="26.5" id="Zhm-2e-Nek"/>
+                            <constraint firstItem="p6z-Ww-AvX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="bYX-7z-P47"/>
+                            <constraint firstItem="O7j-Xx-3oa" firstAttribute="centerY" secondItem="8sU-SP-UAd" secondAttribute="centerY" id="cAP-xE-089"/>
+                            <constraint firstItem="D7g-cN-bVw" firstAttribute="leading" secondItem="xuD-M0-GOU" secondAttribute="trailing" constant="57" id="dAL-wV-ypg"/>
+                            <constraint firstItem="O7j-Xx-3oa" firstAttribute="leading" secondItem="8sU-SP-UAd" secondAttribute="trailing" constant="61" id="f5y-Q6-CDg"/>
+                            <constraint firstItem="8sU-SP-UAd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="gBF-EE-JAz"/>
+                            <constraint firstItem="xuD-M0-GOU" firstAttribute="top" secondItem="8sU-SP-UAd" secondAttribute="bottom" constant="25" id="n30-h8-fbK"/>
+                            <constraint firstItem="UwE-ub-STF" firstAttribute="top" secondItem="8sU-SP-UAd" secondAttribute="bottom" constant="25" id="pIs-Kc-nqz"/>
+                            <constraint firstItem="xuD-M0-GOU" firstAttribute="leading" secondItem="UwE-ub-STF" secondAttribute="trailing" constant="38" id="x8B-bV-1Tl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="Ffy-r6-JqK" id="jd4-uR-k2c"/>
+                        <outlet property="myWebView" destination="tUB-Nr-7Ro" id="Akv-S5-5RZ"/>
+                        <outlet property="txtUrl" destination="8sU-SP-UAd" id="vT4-9P-S27"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308.69565217391306" y="24.776785714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
